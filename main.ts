@@ -102,27 +102,3 @@ createVector().then(async (vectors) => {
         }
     }
 });
-
-// async function getRelevantContexts(contexts: contexts[], message: string) {
-//     // 前提知識の配列ベクトルと質問文ベクトルの内積を計算
-//     function dot(a: number[], b: number[]): number {
-//         return a.map((x, i) => {
-//             return a[i] * b[i];
-//         }).reduce((m, n) => {
-//             return m + n;
-//         })
-//     }
-
-//     const messageVec = await createEmbedding(message);
-
-//     return contexts.map((context) => {
-//         return {
-//             ...context,
-//             similarity: dot(messageVec, context.vector)
-//         }
-//     }).sort((a, b) => {
-//         return b.similarity - a.similarity
-//     }).slice(0, 3).map((i) => {
-//         return i.text
-//     })
-// }
